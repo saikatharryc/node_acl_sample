@@ -145,8 +145,14 @@ function set_roles() {
     // Inherit roles
     //  Every user is allowed to do what guests do
     //  Every admin is allowed to do what users do
+    
+    /**
+     * Define Some Static roles here.
+     */
     acl.addUserRoles(1,'user');
     acl.addUserRoles(2, 'admin');
+
+
     acl.addRoleParents( 'user', 'guest' );
     acl.addRoleParents( 'admin', 'user' );
 }
